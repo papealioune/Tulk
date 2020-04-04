@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.8",
     "@material-ui/icons": "^4.9.1",
+    "@openzeppelin/cli": "^2.8.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
@@ -15,6 +16,7 @@
     "babel-preset-stage-3": "6.24.1",
     "babel-register": "^6.26.0",
     "moment": "^2.24.0",
+    "openzeppelin-solidity": "^2.5.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
@@ -22,7 +24,9 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "reselect": "^4.0.0",
-    "solidity-coverage": "^0.7.2"
+    "solc": "^0.6.4",
+    "solidity-coverage": "^0.7.2",
+    "truffle": "^5.1.20"
   },
   "scripts": {
     "start": "react-scripts start",

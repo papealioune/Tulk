@@ -12,7 +12,7 @@ class Header extends Component {
     return (
       <div className="">
         <AppBar position="static">
-          <Toolbar variant="dense">
+          <Toolbar variant="dense" color="#784af4">
             <Typography variant="h6" color="inherit">
               Tulk
             </Typography>
