@@ -1,10 +1,10 @@
 pragma solidity >=0.5.0;
 
-import "./DaiToken.sol";
+import "openzeppelin-solidity/contracts/token/ERC20/ERC20.sol";
 
 contract DaiSwap {
   string public name = "DaiSwap Instant Exchange";
-  DaiToken public token;
+  ERC20 public token;
   uint public rate = 100;
 
   event DaiSold(
@@ -14,12 +14,12 @@ contract DaiSwap {
     uint rate
   );
 
-  constructor(DaiToken _token) public {
+  constructor(ERC20 _token) public {
     token = _token;
   }
 
   function sellTokens(uint _amount) public {
-    // User can't sell more tokens than they have
+    // Verify if the seller has enough funds
     require(token.balanceOf(msg.sender) >= _amount);
 
     // Calculate the amount of Dai to redeem
@@ -35,5 +35,4 @@ contract DaiSwap {
     // Emit an event
     emit DaiSold(msg.sender, address(token), _amount, rate);
   }
-
 }
